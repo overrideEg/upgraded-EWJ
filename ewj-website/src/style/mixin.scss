@@ -1,0 +1,44 @@
+@mixin myContainer($container-bg, $text-color, $border-color) {
+    background  : $container-bg !important;
+    color       : $text-color !important;
+    border-color: $border-color !important;
+}
+
+@mixin myFont($color, $size, $weight) {
+    color      : $color;
+    font-size  : $size;
+    font-weight: $weight;
+}
+
+@mixin myBorder($top, $right, $bottom, $left, $color, $radius) {
+    border-top   : $top;
+    border-color : $color;
+    border-right : $right;
+    border-bottom: $bottom;
+    border-left  : $left;
+    border-radius: $radius;
+}
+
+@mixin myPadding($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin myMargin($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left;
+}
+
+@mixin myTransform($property) {
+    -webkit-transform: $property;
+    -ms-transform    : $property;
+    -o-transform     : $property;
+    transform        : $property;
+}
+
+@mixin myPostion($position, $top, $right, $bottom, $left, $zIndex) {
+    position: $position;
+    top     : $top;
+    right   : $right;
+    bottom  : $bottom;
+    left    : $left;
+    z-index : $zIndex;
+}

@@ -1,0 +1,126 @@
+/* opacity animation */
+.class-name {
+  animation-name    : opacity;
+  animation-duration: 5s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  */
+
+
+/* to-top animation */
+
+@keyframes to-top {
+  0% {
+    top: 45vh;
+  }
+
+  25% {
+    top: 35vh;
+  }
+
+  50% {
+    top: 25vh;
+  }
+
+  75% {
+    top: 15vh;
+  }
+
+  100% {
+    top: auto
+  }
+}
+
+/*  */
+/* increase-scale animation */
+
+@keyframes increase-scale {
+  0% {
+    -ms-transform: scale(0);
+    transform    : scale(0);
+  }
+
+  25% {
+    -ms-transform: scale(0.25);
+    transform    : scale(0.25);
+  }
+
+  50% {
+    -ms-transform: scale(0.50);
+    transform    : scale(0.50);
+  }
+
+  75% {
+    -ms-transform: scale(0.75);
+    transform    : scale(0.75);
+  }
+
+  100% {
+    -ms-transform: scale(1);
+    transform    : scale(1);
+  }
+}
+
+/*  */
+/* typing animation */
+
+// h1 {
+//   color         : black;
+//   overflow      : hidden;
+//   border-right  : .15em solid red;
+//   white-space   : nowrap;
+//   margin        : 0 auto;
+//   letter-spacing: .15em;
+//   animation     :
+//     typing 3.5s steps(30, end),
+//     blink-caret .5s step-end infinite;
+
+// }
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: red
+  }
+}
+
+
+/*  */

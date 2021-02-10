@@ -1,0 +1,36 @@
+<section>
+  <div class="container p-3 shadow" *ngFor="let details of sectionDetails">
+    <div class="row justify-content-center">
+      <div class="col-10 col-xl-6 col-lg-6 col-md-10 col-sm-9">
+        <div
+          class="card card-img mt-3"
+          style="background: url('{{ details.image.src }}')"
+        >
+          <!-- <img src="assets/img/employee-wearing-mask.jpg" class="img-fluid"> -->
+        </div>
+      </div>
+      <div class="col-10 col-xl-6 col-lg-6 col-md-10 col-sm-9">
+        <div class="card mt-3">
+          <h2>
+            {{ details.title[override.currentLang] }}
+          </h2>
+          <ng-container *ngFor="let list of details.list">
+            <h5 class="mt-2">
+              {{ list.listTitle[override.currentLang] }}
+            </h5>
+            <h6 *ngFor="let listContent of list.listContent">
+              <mat-icon>done</mat-icon>
+              <span> {{ listContent[override.currentLang] }}</span>
+            </h6>
+          </ng-container>
+
+          <ng-container *ngFor="let detailsContent of details.details">
+            <p>
+              {{ detailsContent[override.currentLang] }}
+            </p>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

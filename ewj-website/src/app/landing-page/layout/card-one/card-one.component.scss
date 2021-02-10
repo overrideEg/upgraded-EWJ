@@ -1,0 +1,21 @@
+@import '../../../../styles.scss';
+.card{
+    border-radius: 15px;
+    background-color: #fff !important;
+.card-body{
+    background-color: transparent;
+    h5{
+        opacity: 0.85;
+    }
+    p{
+        color: $main-color;
+    }
+}
+img{
+    height: auto;
+    max-height: 255px;
+}
+button{
+    height: 35px;
+}
+}

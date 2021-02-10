@@ -1,0 +1,26 @@
+<div class="bg">
+  <div class="navBar">
+    <app-navbar></app-navbar>
+  </div>
+
+  <section>
+    <div class="container">
+      <ng-container *ngFor="let detailes of sectionHeader">
+        <app-section-header [sectionHeader]="detailes"></app-section-header>
+      </ng-container>
+
+      <div class="row">
+        <div class="col-12 mt-5">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let detailes of cardDataTwo">
+              <div class="slide">
+                <card-two [card]="detailes"></card-two>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</div>

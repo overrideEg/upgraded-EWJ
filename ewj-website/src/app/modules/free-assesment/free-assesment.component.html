@@ -1,0 +1,51 @@
+<div class="bg">
+  <div class="navBar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <section>
+    <div class="container">
+      <ng-container *ngFor="let detailes of sectionHeader">
+        <app-section-header [sectionHeader]="detailes"></app-section-header>
+      </ng-container>
+    </div>
+
+    <div class="container">
+      <div class="row mt-4 justify-content-center align-content-center mt-2">
+        <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-2 py-2"
+          *ngFor="let detailes of Allassessment| paginate:{itemsPerPage:3,id:'ff',totalItems:numberOfPage,currentPage:page};">
+          <div class="card shadow-sm h-100 pb-4">
+            <img class="card-img-top img-fluid m-auto d-block" src="{{detailes?.image}}">
+            <div class="card-body">
+              <h5 class="card-title"> {{detailes?.title[override.currentLang]}} </h5>
+              <p class="card-text"> {{detailes?.description[override.currentLang]}}</p>
+
+              <div class="card-footer position-absolute p-0 pb-2 w-100 border-0 bg-transparent" style="bottom: 0.5rem;">
+                <button mat-flat-button color="primary" [routerLink]="['/FreeAssesment','single',detailes?._id]">
+                  readMore
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row mt-4 justify-content-center align-content-center mt-2">
+        <div
+          class="col-12 col-xl-3 col-lg-4 col-md-4 col-sm-6 mt-2 py-2"
+          *ngFor="let detailes of cardDataOne"
+        >
+          <card-one [card]="detailes"></card-one>
+        </div>
+      </div> -->
+      <div class="row mt-4 justify-content-center align-content-center mt-2">
+        <!-- <app-pagination></app-pagination> -->
+        <pagination-controls id="ff" (pageBoundsCorrection)="page = $event" (pageChange)="page = $event" maxSize="9"
+          directionLinks="true" autoHide="true" responsive="true" previousLabel="Previous" i18n-previousLabel
+          nextLabel="Next" i18n-nextLabel screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+          screenReaderCurrentLabel="You're on page">
+        </pagination-controls>
+      </div>
+    </div>
+  </section>
+  <app-footer-section></app-footer-section>
+</div>

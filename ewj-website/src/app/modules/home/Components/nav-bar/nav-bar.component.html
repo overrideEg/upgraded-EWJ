@@ -1,0 +1,215 @@
+<nav class="">
+  <div class="container pl-0 pr-0" id="ewjLogo">
+    <div class="col-3 pl-0 pr-0 pt-2 pb-2">
+      <div>
+        <img src="../../../assets/ewj-logo.png" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+  <mat-toolbar>
+    <div class="container">
+      <div class="row justify-content-between align-items-center align-content-center">
+        <div class="col-auto" id="menuIcon">
+          <button mat-flat-button color="light" class="mr-2 ml-2" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div class="col-auto" id="navbarBtn">
+          <div class="row justify-content-end align-items-center align-content-center">
+            <div class="col-auto p-0" id="ewjIcon">
+              <img src="../../../assets/favicon.ico" class="img-fluid" />
+            </div>
+
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/" i18n>
+                Home
+              </button>
+            </div>
+            <!-- <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/solutionsPage" i18n>
+                solution
+              </button>
+            </div> -->
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" [matMenuTriggerFor]="menu" i18n>
+                Solutions
+              </button>
+              <mat-menu #menu="matMenu">
+                <a class="nav-link" routerLink="/solutionsPage/solutions" [routerLinkActive]="['is-active']"
+                  mat-menu-item i18n>Solutions For Journey</a>
+                <a class="nav-link" routerLink="/solutionsPage/gotoJourney" [routerLinkActive]="['is-active']"
+                  mat-menu-item i18n>How To Start
+                </a>
+              </mat-menu>
+            </div>
+            <!-- <div class="col-auto p-0">
+              <button
+                mat-flat-button
+                color="light"
+                [matMenuTriggerFor]="menu"
+                i18n
+                routerLink='/solutionsPage'
+              >
+                Solutions
+              </button>
+               <mat-menu #menu="matMenu">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/solutions']"
+                  [routerLinkActive]="['is-active']"
+                  routerLink="/solutions"
+                  mat-menu-item
+                  >Solutions For Journey</a
+                >
+                <a
+                  class="nav-link"
+                  [routerLink]="['/product-journey']"
+                  [routerLinkActive]="['is-active']"
+                  routerLink="/product-journey"
+                  mat-menu-item
+                  >How To Start
+                </a>
+              </mat-menu>
+            </div> -->
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/FreeAssesment" [routerLinkActive]="['is-active']" i18n>
+                Free Assessment
+              </button>
+            </div>
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/resources" [routerLinkActive]="['is-active']" i18n>
+                Resources
+              </button>
+            </div>
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/solutionPartner" [routerLinkActive]="['is-active']"
+                i18n>
+                Solution Parteners
+              </button>
+            </div>
+            <div class="col-auto p-0">
+              <button mat-flat-button color="light" routerLink="/contactUS" [routerLinkActive]="['is-active']" i18n>
+                Contact US
+              </button>
+            </div>
+            <!-- <div class="col-auto p-0">
+              <button mat-flat-button color="light" (click)="openDialog()">
+                {{'Contact' | translate }}
+              </button>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <div class="row align-items-center">
+            <div class="col-auto respButton">
+              <button mat-flat-button color="primary" [matMenuTriggerFor]="menulang" id="lang">
+                <!-- language -->
+                <mat-icon>language</mat-icon>
+              </button>
+
+              <mat-menu #menulang="matMenu">
+                <button mat-menu-item>
+                  <a [href]="'/en'+currentUrl" i18n>English</a>
+                </button>
+                <button mat-menu-item href="/ar">
+                  <a [href]="'/ar'+currentUrl" i18n>العربيه</a>
+                </button>
+              </mat-menu>
+            </div>
+            <div class="col-auto respButton">
+              <a mat-flat-button color="primary" href="http://system.ewj-portal.com/" id="loginportal" i18n>
+                Login to Portal
+              </a>
+            </div>
+            <div class="col-auto respImg">
+              <img src="../../../assets/ewj-logo.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+</nav>
+
+<mat-drawer-container>
+  <mat-drawer #drawer>
+    <div class="container">
+      <button mat-flat-button color="light" class="close mt-2 text-center" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <ul class="list-group pl-3">
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" class="w-100" routerLink="/" i18n>
+            Home
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" class="w-100" routerLink="/solutionsPage" i18n>
+            Solution
+          </button>
+        </li>
+        <!-- <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" [matMenuTriggerFor]="menu" i18n>
+            Solutions
+          </button>
+          <mat-menu #menu="matMenu">
+            <a class="nav-link" routerLink="/solutions" mat-menu-item i18n>
+              Solutions For Journey</a
+            >
+            <a
+              class="nav-link"
+              routerLink="/product-journey"
+              mat-menu-item
+              i18n
+            >
+              How To Start</a
+            >
+          </mat-menu>
+        </li> -->
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" routerLink="/FreeAssesment" [routerLinkActive]="['is-active']" i18n>
+            Free Assessment
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" routerLink="/resources" [routerLinkActive]="['is-active']" i18n>
+            Resources
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" routerLink="/solutionPartner" [routerLinkActive]="['is-active']" i18n>
+            Solution Parteners
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" class="w-100" i18n routerLink="/contactUS">
+            Contact
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="light" href="http://system.ewj-portal.com/" class="w-100 mt-2" i18n>
+            Login in to Portal
+          </button>
+        </li>
+        <li class="list-group-item bg-transparent border-0">
+          <button mat-flat-button color="primary" class="w-100" [matMenuTriggerFor]="menulang" i18n>
+            language <mat-icon>language</mat-icon>
+          </button>
+          <mat-menu #menulang="matMenu">
+            <button mat-menu-item>
+              <a [href]="'/en'+currentUrl" i18n>English</a>
+            </button>
+            <button mat-menu-item href="/ar">
+              <a [href]="'/ar'+currentUrl" i18n>العربيه</a>
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
+
+<!-- <ng-template #contact>
+  <app-contact-us></app-contact-us>
+</ng-template> -->

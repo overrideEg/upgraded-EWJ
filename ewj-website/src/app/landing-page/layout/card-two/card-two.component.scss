@@ -1,0 +1,24 @@
+@import '../../../../styles.scss';
+.card{
+    border: 0;
+    background-color: #fff !important;
+.card-body{
+    
+    background-color: transparent;
+    h5{
+        color: $main-color;
+    }
+    p{
+        color: $second-color;
+    }
+}
+img{
+    height: 150px;
+    width: 150px;
+    padding: 1rem;
+    background-color:  $light-color ;
+}
+button{
+    height: 35px;
+}
+}

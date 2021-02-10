@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+section {
+    padding-top     : 10vh;
+    padding-bottom  : 10vh;
+    background-color: $white-color;
+
+    .card {
+        background-color: transparent;
+        border          : 0;
+
+        h4 {
+            color: $second-color;
+        }
+
+        h5 {
+            color: $accent-color;
+        }
+
+        p {
+            opacity: 0.85;
+        }
+
+        h4,
+        h5,
+        p {
+            margin-top: 2vh;
+        }
+    }
+
+    .row:nth-of-type(even) {
+        .card-img {
+            order: 2;
+        }
+
+        .card-text {
+            order: 1;
+        }
+
+    }
+}

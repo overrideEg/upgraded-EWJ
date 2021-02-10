@@ -1,0 +1,58 @@
+// root
+
+// :root {
+//     --main-color     : $main-color;
+//     --accent-color   : $accent-color;
+//     --danger-color   : $danger-color;
+//     --warning-color  : $warning-color;
+//     --white-color    : $white-color;
+//     --light-color    : $light-color;
+//     --darkLight-color: $darkLight-color;
+//     --dark-color     : $dark-color;
+// }
+
+
+:root {
+    // --direction: ltr;
+    // --text-align: ltr;
+    --main-color     : #8A92FF;
+    --accent-color   : #002B81;
+    --danger-color   : #dc3545;
+    --warning-color  : #ffc107;
+    --white-color    : #fff;
+    --light-color    : #F3F8FA;
+    --darkLight-color: #1F1F1F;
+    --dark-color     : #121212;
+
+}
+
+$main-color      : #7592B3;
+$second-color      : #003775;
+$accent-color    : #FFC107;
+$danger-color    : #dc3545;
+$warning-color   : #ffc107;
+$white-color     : #fff;
+$light-color     : #F3F8FA;
+$darkLight-color : #1F1F1F;
+$dark-color      : #121212;
+
+//rgb
+$main-rgba-25   : rgba(63, 61, 86, 0.25);
+$main-rgba-50   : rgba(63, 61, 86, 0.50);
+$main-rgba-75   : rgba(63, 61, 86, 0.75);
+$main-rgba-100  : rgba(63, 61, 86, 1);
+$accent-rgba-25 : rgba(0, 43, 129, 0.25);
+$accent-rgba-50 : rgba(0, 43, 129, 0.50);
+$accent-rgba-75 : rgba(0, 43, 129, 0.80);
+$accent-rgba-100: rgba(0, 43, 129, 1);
+
+$second-rgba-25 : rgba(0, 55, 117, 0.25);
+$second-rgba-50 : rgba(0, 55, 117, 0.50);
+$second-rgba-75 : rgba(0, 55, 117, 0.75);
+$second-rgba-100: rgba(0, 55, 117, 1);
+
+// $boxshadow: ;
+$boxshadow    : $main-rgba-25;
+$boxshadowNone: none !important;
+
+

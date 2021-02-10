@@ -1,0 +1,152 @@
+// @import "../../../styles.scss";
+@import "../../../../../styles.scss";
+
+nav {
+  overflow: hidden;
+  transition: 0.5s;
+
+  .mat-toolbar {
+    max-height: 70px;
+    background-color: transparent;
+
+    #menuIcon {
+      display: none;
+
+      @media screen and (max-width: 991px) {
+        display: block;
+      }
+    }
+
+    #navbarBtn {
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    img {
+      max-height: 50px;
+      // transform : scale(1.5, 1.5);
+      //margin: auto;
+      display: block;
+    }
+
+    .mat-flat-button {
+      @include myContainer(transparent, #fff, transparent);
+      background-color: transparent;
+      text-align: center !important;
+    }
+    button.is-active {
+      background-color: $white-color !important ;
+      color: $main-color !important ;
+    }
+    #loginportal {
+      @include myContainer(#fff, $main-color, #fff);
+      font-size: 1.2rem;
+    }
+
+    #lang {
+      border: 1px solid;
+      @include myContainer(transparent, #fff, #fff);
+    }
+  }
+
+  #ewjLogo {
+    @media screen and (max-width: 991px) {
+      display: none !important;
+    }
+  }
+
+  .respButton {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .respImg {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+
+      img {
+        transform: scale(1.2, 1.2) !important;
+        height: 20px;
+        width: 18vh;
+      }
+    }
+  }
+}
+
+.mat-drawer-container {
+  display: contents;
+
+  button {
+    height: 45px;
+  }
+
+  .mat-drawer:not(.mat-drawer-side) {
+    position: fixed;
+    z-index: 55555;
+    background-color: var(--white-color) !important;
+    // margin-top      : 10vh;
+    width: 40%;
+
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  .card {
+    @include myContainer(var(--white-color), $dark-color, transparent);
+
+    .card .card-header {
+      @include myContainer(var(--white-color), $dark-color, transparent);
+    }
+
+    button,
+    a,
+    .mat-flat-button {
+      text-align: var(--text-align) !important;
+    }
+  }
+}
+
+.mat-flat-button {
+  text-align: var(--text-align) !important;
+}
+
+#ewjLogo,
+#ewjIcon {
+  display: none;
+}
+
+.activeIcon {
+  display: block !important;
+
+  img {
+    height: 80%;
+    margin: auto !important;
+  }
+}
+
+.activeLogo {
+  display: block !important;
+}
+
+.active_nav {
+  background-color: $second-rgba-75 !important;
+}
+.nav-link {
+  color: $main-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+a.is-active {
+  color: $accent-color !important;
+  pointer-events: none;
+  &:hover {
+    pointer-events: none;
+    color: $accent-color;
+  }
+}

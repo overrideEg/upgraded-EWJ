@@ -1,0 +1,187 @@
+<section>
+  <div class="container">
+    <ng-container *ngFor="let detailes of sectionHeader">
+      <app-section-header [sectionHeader]="detailes"></app-section-header>
+    </ng-container>
+  </div>
+
+  <div class="container">
+    <div class="row mt-4 justify-content-center">
+      <mat-tab-group>
+        <div class="col-12 mt-2">
+          <mat-tab label="safe to go solutions">
+            <div class="col-12 mt-4">
+              <ng-container *ngFor="let item of Allcategory|slice:0:4">
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="row mt-2 w-100 justify-content-between">
+                        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+                          <ng-container>
+                            <h5>{{ item?.title[override.currentLang] }}</h5>
+                          </ng-container>
+                        </div>
+                        <div class="col-auto">
+                          <!-- <mat-icon>add</mat-icon> -->
+                        </div>
+                      </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <div class="row align-items-center align-content-center mt-2">
+                    <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2"
+                      *ngFor="let item of Allcategory |slice:0:3">
+                      <div class="card  border-0 bg-transparent">
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-5 mt-2">
+                            <img src="{{item?.image}}" class="img-fluid d-block m-auto">
+                          </div>
+                          <div class="col-7 mt-2 p-0">
+                            <h6 class=""> {{item?.title[override.currentLang]}}</h6>
+                          </div>
+                        </div>
+                        <p>
+                          {{item?.description[override.currentLang] }}
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="row mt-2 w-100 justify-content-between">
+                        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+                          <ng-container>
+                            <h5>{{ item?.title[override.currentLang] }}</h5>
+                          </ng-container>
+                        </div>
+                        <div class="col-auto">
+                          <!-- <mat-icon>add</mat-icon> -->
+                        </div>
+                      </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <div class="row align-items-center align-content-center mt-2">
+                    <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2"
+                      *ngFor="let item of Allcategory |slice:0:3">
+                      <div class="card  border-0 bg-transparent">
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-5 mt-2">
+                            <img src="{{item?.image}}" class="img-fluid d-block m-auto">
+                          </div>
+                          <div class="col-7 mt-2 p-0">
+                            <h6 class=""> {{item?.title[override.currentLang]}}</h6>
+                          </div>
+                        </div>
+                        <p>
+                          {{item?.description[override.currentLang] }}
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </mat-expansion-panel>
+              </ng-container>
+            </div>
+          </mat-tab>
+        </div>
+        <div class="col-12 mt-2">
+          <mat-tab label="smart & intelligent solutions">
+            <div class="col-12 mt-4">
+              <ng-container *ngFor="let item of Allcategory|slice:0:4">
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="row mt-2 w-100 justify-content-between">
+                        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+                          <ng-container>
+                            <h5>{{ item?.title[override.currentLang] }}</h5>
+                          </ng-container>
+                        </div>
+                        <div class="col-auto">
+                          <!-- <mat-icon>add</mat-icon> -->
+                        </div>
+                      </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <div class="row align-items-center align-content-center mt-2">
+                    <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2"
+                      *ngFor="let item of Allcategory |slice:0:3">
+                      <div class="card  border-0 bg-transparent">
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-5 mt-2">
+                            <img src="{{item?.image}}" class="img-fluid d-block m-auto">
+                          </div>
+                          <div class="col-7 mt-2 p-0">
+                            <h6 class=""> {{item?.title[override.currentLang]}}</h6>
+                          </div>
+                        </div>
+                        <p>
+                          {{item?.description[override.currentLang] }}
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="row mt-2 w-100 justify-content-between">
+                        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+                          <ng-container *ngFor="let item of Allcategory|slice:0:1">
+                            <h5>{{ item?.title[override.currentLang] }}</h5>
+                          </ng-container>
+                        </div>
+                        <div class="col-auto">
+                          <!-- <mat-icon>add</mat-icon> -->
+                        </div>
+                      </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <div class="row align-items-center align-content-center mt-2">
+                    <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2"
+                      *ngFor="let item of Allcategory |slice:0:3">
+                      <div class="card  border-0 bg-transparent">
+                        <div class="row justify-content-center align-items-center">
+                          <div class="col-5 mt-2">
+                            <img src="{{item?.image}}" class="img-fluid d-block m-auto">
+                          </div>
+                          <div class="col-7 mt-2 p-0">
+                            <h6 class=""> {{item?.title[override.currentLang]}}</h6>
+                          </div>
+                        </div>
+                        <p>
+                          {{item?.description[override.currentLang] }}
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </mat-expansion-panel>
+              </ng-container>
+            </div>
+
+          </mat-tab>
+        </div>
+      </mat-tab-group>
+    </div>
+  </div>
+</section>

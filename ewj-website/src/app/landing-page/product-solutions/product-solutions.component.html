@@ -1,0 +1,72 @@
+<ng-container *ngIf=" show == true then navbar"></ng-container>
+
+<ng-template #navbar>
+  <div class="navBar">
+    <app-navbar></app-navbar>
+  </div>
+</ng-template> 
+  
+  
+  <section>
+        <div class="container">
+            <ng-container  *ngFor="let detailes of sectionHeader">
+                <app-section-header [sectionHeader]='detailes'></app-section-header>
+            </ng-container>   
+         </div>   
+
+        <!-- <div class="container">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-auto">
+                    <button mat-flat-button color="primary" class="text-uppercase shadow-lg">
+                        {{'safe to go solutions' | translate }} </button>
+                </div>
+                <div class="col-auto">
+                    <button mat-flat-button color="primary" class="text-uppercase shadow-lg">
+                        {{'smart & intelligent solutions' | translate }} </button>
+                </div>
+            </div>
+            <div class="row mt-4 justify-content-center">
+        
+                <div class="col-12 mt-4" *ngFor="let detailes of expansionPanel">
+                    <ng-container>
+                        <app-expansion-panel [expansionPanel]="detailes"></app-expansion-panel>
+                    </ng-container>
+                </div>
+
+            </div>
+         </div>       -->
+
+
+         <div class="container">
+            <div class="row mt-4 justify-content-center">
+                <mat-tab-group>
+                    <div class="col-12 mt-2">
+                        <mat-tab label="safe to go solutions">
+    
+                            <div class="col-12 mt-4" *ngFor="let detailes of expansionPanel">
+                                <ng-container>
+                                    <app-expansion-panel [expansionPanel]="detailes"></app-expansion-panel>
+                                </ng-container>
+                            </div>
+             
+                        </mat-tab>
+                  
+
+                    </div>
+                    <div class="col-12 mt-2">
+                        <mat-tab label="smart & intelligent solutions">
+                            <div class="col-12 mt-4" *ngFor="let detailes of expansionPanel">
+                                <ng-container>
+                                    <app-expansion-panel [expansionPanel]="detailes"></app-expansion-panel>
+                                </ng-container>
+                            </div>
+            
+                        </mat-tab>
+                    </div>
+                  </mat-tab-group>
+            </div>
+         </div>
+
+
+
+    </section>

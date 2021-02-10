@@ -1,0 +1,53 @@
+@import '../../../../styles.scss';
+
+mat-expansion-panel {
+    box-shadow: none !important;
+    width     : 80% !important;
+    margin    : auto !important;
+
+    mat-icon {
+        color      : $main-color;
+        font-weight: bold;
+    }
+
+    mat-panel-title,
+    mat-expansion-panel-header {
+        width           : 100%;
+        background-color: $light-color !important;
+
+        @media screen and (max-width: 320px) {
+            padding      : 0;
+            padding-right: 0.5rem;
+            padding-left : 0.5rem;
+            width: 340px;
+        }
+    }
+
+    p {
+        margin-top: 1.5rem;
+
+        a {
+            color: $accent-color !important;
+        }
+    }
+
+    h5,
+    h6 {
+        color      : $main-color;
+        font-weight: bold;
+    }
+
+    h6 {
+        width : 90%;
+        margin: auto;
+    }
+
+    img {
+        background-color: $main-color;
+        border-radius   : 50px;
+        height          : 70px;
+        width           : 70px;
+        padding         : 1rem;
+    }
+
+}

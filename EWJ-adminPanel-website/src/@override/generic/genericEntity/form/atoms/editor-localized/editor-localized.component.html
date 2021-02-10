@@ -1,0 +1,67 @@
+<div [formGroup]="form">
+    <div [formGroupName]='field.name'>
+ 
+        <!-- <mat-grid-list [cols]="entityData.form.cols" rowHeight="4em" *ngIf="entityData.form.localizedAllFields || entities.isEditMode">
+            <mat-grid-tile [colspan]="field.cols/Langs.length" [rowspan]="field.rows * 2" *ngFor="let lang of Langs">
+                 
+                <div class="example-full-width" appearance="outline">
+                    <mat-label>{{field.label || field.name | translate}} {{'in ' + lang | translate}}</mat-label>
+                    <mat-label class="warn-color mat-subheading-1" *ngIf="field.required">*</mat-label>
+                    <ckeditor [editor]="Editor" [disabled]="field.disabled" [formControlName]="lang" ></ckeditor>
+                    <mat-error *ngIf="!isValid">
+                        {{'Please enter a valid' |translate}} {{field.label |translate}}
+                    </mat-error>
+                    <mat-error *ngIf="isDirty">
+                        {{field.label |translate}} {{'is' |translate}} <strong>{{'required' |translate}}</strong>
+                    </mat-error>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list> -->
+
+        <div class="example-full-width" appearance="outline" *ngIf="entityData.form.localizedAllFields || entities.isEditMode">
+            <div class="col-md-12" *ngFor="let lang of Langs">
+                <mat-label>{{field.label || field.name | translate}} {{'in ' + lang | translate}}</mat-label>
+                <mat-label class="warn-color mat-subheading-1" *ngIf="field.required">*</mat-label>
+                <ckeditor [editor]="Editor" [disabled]="field.disabled" [formControlName]="lang" ></ckeditor>
+                <mat-error *ngIf="!isValid">
+                    {{'Please enter a valid' |translate}} {{field.label |translate}}
+                </mat-error>
+                <mat-error *ngIf="isDirty">
+                    {{field.label |translate}} {{'is' |translate}} <strong>{{'required' |translate}}</strong>
+                </mat-error>
+            </div>
+         
+            <!-- <mat-hint class="warn-color mat-subheading-1">{{field.details }}</mat-hint> -->
+
+
+        </div>
+        <div class="example-full-width" appearance="outline" *ngIf="!entityData.form.localizedAllFields && ! entities.isEditMode">
+            <mat-label>{{field.label || field.name | translate}} {{'in '+override.currentLang | translate}}
+            </mat-label>
+            <mat-label class="warn-color mat-subheading-1" *ngIf="field.required">*</mat-label>
+            <ckeditor [editor]="Editor" [disabled]="field.disabled" formControlName="{{override.currentLang}}" ></ckeditor>
+
+            <!-- <mat-hint class="warn-color mat-subheading-1">{{field.details }}</mat-hint> -->
+
+
+        </div>
+    </div>
+
+
+
+</div>
+<!-- <div [formGroup]="form">
+    <div [formGroupName]='field.name'>
+
+        <div class="row" *ngIf="entityData.form.localizedAllFields || entities.isEditMode">
+            <div [ngClass]=" isArray? 'col-auto': 'row'" *ngFor="let lang of Langs">
+                <ckeditor [editor]="Editor" [disabled]="field.disabled" [formControlName]="lang" ></ckeditor>
+            </div>
+        </div>
+
+        <ckeditor [editor]="Editor" [disabled]="field.disabled" [formControlName]="lang" ></ckeditor>
+    </div>
+
+
+
+</div> -->

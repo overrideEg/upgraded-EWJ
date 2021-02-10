@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+section {
+    padding-top     : 15vh;
+    padding-bottom  : 10vh;
+    min-height      : 80vh;
+    background-color: $white-color;
+
+    .card {
+        min-height: 30vh;
+        @include myContainer($main-color, $white-color, $main-color);
+        padding: 1rem;
+
+        h5 {
+            text-align    : center;
+            text-transform: uppercase;
+            text-transform: uppercase;
+        }
+    }
+
+    .col-12:nth-of-type(even) .card {
+        @include myContainer($accent-color, $white-color, $accent-color);
+
+    }
+}

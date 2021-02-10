@@ -1,0 +1,78 @@
+<div class="navBar">
+  <app-navbar></app-navbar>
+</div>
+
+<section>
+
+
+  <div class="container">
+    <ng-container *ngFor="let detailes of sectionHeader">
+      <app-section-header [sectionHeader]='detailes'></app-section-header>
+    </ng-container>
+
+  </div>
+
+  <div class="container">
+
+    <div class="row mt-4 justify-content-center">
+
+      <div class="col-11 col-xl-8 col-lg-8 col-md-10 col-sm-11">
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+
+            <mat-form-field i18n>
+              <input matInput placeholder="Name" i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field>
+              <input matInput placeholder=" Email" type="email" i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field i18n>
+              <input matInput placeholder=" Company" i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field i18n>
+              <input matInput placeholder="Job Title " i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field>
+              <mat-label i18n> Country</mat-label>
+              <mat-select>
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field i18n>
+              <input matInput placeholder="Phone Number" i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field i18n>
+              <input matInput placeholder="Where is your headquarters? " i18n>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <mat-form-field>
+              <mat-label i18n> What industry is your company in?</mat-label>
+              <mat-select>
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-3">
+            <button class="d-block m-auto w-50" mat-flat-button color="primary" i18n> SUBMIT
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<section>
+  <div class="container">
+    <ng-container *ngFor="let detailes of sectionHeader ">
+      <app-section-header [sectionHeader]='detailes'></app-section-header>
+    </ng-container>
+
+  </div>
+
+  <div class="container">
+    <!-- 4 cards -->
+    <div class="row mt-4 justify-content-center align-items-center align-content-center mt-2">
+      <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-4 mt-2">
+        <h6 class="text-center text-uppercase bold active" i18n>Flyers</h6>
+      </div>
+      <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-4 mt-2">
+        <h6 class="text-center text-uppercase bold" i18n>Guidelines</h6>
+      </div>
+      <div class="col-6 col-xl-3 col-lg-3 col-md-3 col-sm-4 mt-2">
+        <h6 class="text-center text-uppercase bold" i18n>Standards</h6>
+      </div>
+    </div>
+
+    <div class="row mt-4 justify-content-center align-content-center mt-2">
+      <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-2 py-2"
+        *ngFor="let detailes of Allassessment|slice:0:3">
+        <div class="card shadow-sm h-100 pb-4">
+          <img class="card-img-top img-fluid m-auto d-block" src="{{detailes?.image}}">
+          <div class="card-body">
+            <h5 class="card-title"> {{detailes?.title[override.currentLang]}} </h5>
+            <p class="card-text"> {{detailes?.description[override.currentLang]}}</p>
+
+            <div class="card-footer position-absolute p-0 pb-2 w-100 border-0 bg-transparent" style="bottom: 0.5rem;">
+              <button mat-flat-button color="primary" [routerLink]="['/FreeAssesment','single',detailes?._id]">
+                readMore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

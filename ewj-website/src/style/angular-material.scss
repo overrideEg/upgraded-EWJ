@@ -1,0 +1,208 @@
+@import "colors.scss";
+@import "mixin.scss";
+
+.mat-raised-button,
+.mat-button,
+.mat-stroked-button,
+.mat-flat-button {
+  padding: 0.3rem 1rem 0.2rem 1em !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  transition: 0.3s !important;
+  // min-height   : 5vh !important;
+  vertical-align: middle !important;
+}
+
+.mat-button[color="primary"] {
+  @include myContainer($white-color, $main-color, $white-color);
+}
+
+.mat-button[color="secondary"] {
+  @include myContainer($white-color, $accent-color, $white-color);
+}
+
+.mat-button[color="light"] {
+  @include myContainer($white-color, $dark-color, $white-color);
+}
+
+.mat-button[color="warn"] {
+  @include myContainer($white-color, $warning-color, $white-color);
+}
+
+.mat-button[color="danger"] {
+  @include myContainer($white-color, $danger-color, $white-color);
+}
+
+.mat-button[color="dark"] {
+  @include myContainer($dark-color, $white-color, $dark-color);
+}
+
+.mat-flat-button[color="primary"] {
+  @include myContainer($main-color, $white-color, $main-color);
+}
+
+.mat-flat-button[color="secondary"] {
+  @include myContainer($accent-color, $white-color, $accent-color);
+}
+
+.mat-flat-button[color="light"] {
+  @include myContainer(var(--white-color), $main-color, var(--white-color));
+}
+
+.mat-flat-button[color="warn"] {
+  @include myContainer($warning-color, $white-color, $warning-color);
+}
+
+.mat-flat-button[color="danger"] {
+  @include myContainer($danger-color, $white-color, $danger-color);
+}
+
+.mat-flat-button[color="dark"] {
+  @include myContainer($dark-color, $white-color, $dark-color);
+}
+
+.mat-stroked-button[color="primary"] {
+  @include myContainer($white-color, $main-color, $main-color);
+}
+
+.mat-stroked-button[color="secondary"] {
+  @include myContainer($white-color, $accent-color, $accent-color);
+}
+
+.mat-stroked-button[color="light"] {
+  @include myContainer($white-color, $dark-color, $dark-color);
+}
+
+.mat-stroked-button[color="danger"] {
+  @include myContainer($white-color, $danger-color, $danger-color);
+}
+
+.mat-stroked-button[color="warn"] {
+  @include myContainer($white-color, $warning-color, $warning-color);
+}
+
+.mat-stroked-button[color="dark"] {
+  @include myContainer($dark-color, $white-color, $white-color);
+}
+
+.mat-raised-button[color="primary"] {
+  @include myContainer($main-color, $white-color, $main-color);
+
+  &:hover {
+    @include myContainer($white-color, $main-color, $main-color);
+  }
+}
+
+.mat-raised-button[color="secondary"] {
+  @include myContainer($accent-color, $white-color, $accent-color);
+
+  &:hover {
+    @include myContainer($white-color, $accent-color, $accent-color);
+  }
+}
+
+.mat-raised-button[color="light"] {
+  @include myContainer($white-color, $main-color, $white-color);
+
+  &:hover {
+    @include myContainer($white-color, $main-color, $main-color);
+  }
+}
+
+.mat-raised-button[color="dark"] {
+  @include myContainer(
+    var(--dark-color),
+    var(--white-color),
+    var(--dark-color)
+  );
+
+  &:hover {
+    @include myContainer(
+      var(--white-color),
+      var(--dark-color),
+      var(--dark-color)
+    );
+  }
+}
+
+.mat-raised-button[color="danger"] {
+  @include myContainer($danger-color, $white-color, $danger-color);
+
+  &:hover {
+    @include myContainer($white-color, $danger-color, $danger-color);
+  }
+}
+
+.mat-raised-button[color="warn"] {
+  @include myContainer($warning-color, $white-color, $warning-color);
+
+  &:hover {
+    @include myContainer($white-color, $warning-color, $warning-color);
+  }
+}
+
+//side bar menu
+.mat-drawer-content {
+  height: 0 !important;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+//expantion
+
+.mat-tab-header {
+  border: 0 !important;
+}
+.mat-tab-labels {
+  justify-content: space-evenly !important;
+  .mat-tab-label {
+    color: $white-color !important;
+    background-color: $main-color !important;
+    border: 0 !important;
+    font-size: 1.2rem !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    opacity: 1;
+    text-transform: uppercase;
+    @media screen and (max-width: 991px) {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: $main-color;
+}
+
+.mat-ink-bar {
+  display: none !important;
+}
+
+// form
+
+.mat-form-field-underline {
+  display: none !important;
+}
+
+.mat-form-field-wrapper {
+  background-color: $main-rgba-25;
+  border-radius: 15px;
+  height: 45px;
+  padding: 0rem 0.8rem 0rem 0.8rem !important;
+}
+
+.mat-tab-labels {
+  @media screen and (max-width: 720px) {
+    display: grid !important;
+  }
+}
+.mat-tab-label {
+  @media screen and (max-width: 720px) {
+    margin-top: 2vh;
+  }
+}

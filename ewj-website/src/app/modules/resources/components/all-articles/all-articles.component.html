@@ -1,0 +1,144 @@
+<section>
+  <div class="container-fluid shadow-sm">
+    <div class="row w-75 d-block m-auto align-items-center justify-content-center">
+      <div class="card border-0 rounded-0">
+        <h3 class="text-captalize w-100 d-block m-auto">Category Title</h3>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xl-8 col-lg-8 col-md-10 col-sm-12 mt-3 mb-3">
+        <div class="row justify-content-center mt-2">
+          <div class="col-12 mt-4">
+            <div class="card p-0 mt-2 bg-transparent border-0 round-0"
+              *ngFor="let item of AllResources | paginate:{itemsPerPage:3,id:'ff',totalItems:numberOfPage,currentPage:page}">
+              <div class="row justify-content-center">
+                <div class="col-12 col-xl-4 col-lg-4 col-md-5 col-sm-6 mt-2 p-0">
+                  <img src="{{item?.image}}" class="img-fluid m-auto d-block" />
+                </div>
+                <div class="col-12 col-xl-8 col-lg-8 col-md-7 col-sm-6 mt-2 p-0">
+                  <div class="card-body pt-0 pb-0">
+                    <h4 class="text-capitalize font-weight-bold">{{item?.title[override.currentLang]}}</h4>
+                    <p>
+                      {{item?.description[override.currentLang]}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer border-0">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-auto">
+                    <div class="row">
+                      <div class="col-auto d-flex justify-content-center mt-2">
+                        <mat-icon>date_range</mat-icon>
+                        <span class="mr-2 ml-2">{{item?.valueDate|date:'medium'}}</span>
+                      </div>
+                      <div class="col-auto d-flex justify-content-center mt-2">
+                        <mat-icon>create</mat-icon>
+                        <span class="mr-2 ml-2">Symbios</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto mt-2">
+                    <button mat-flat-button color="primary" class="d-block m-auto"
+                      [routerLink]="['/resources','single-article',item?._id]" i18n>
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+          <div class="col-12 mt-4">
+            <!-- <app-pagination></app-pagination> -->
+            <pagination-controls id="ff" (pageBoundsCorrection)="page = $event" (pageChange)="page = $event" maxSize="9"
+              directionLinks="true" autoHide="true" responsive="true" previousLabel="Previous" nextLabel="Next"
+              screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" i18n-nextLabel i18n-previousLabel
+              screenReaderCurrentLabel="You're on page">
+            </pagination-controls>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-10 sidebar mt-4 mb-3">
+        <div class="row">
+          <!-- <div class="col-xl">
+            <div class="card border-0 bg-transparent">
+              <form>
+                <mat-form-field class="example-full-width w-75 d-block m-auto">
+                  <mat-label i18n>Search</mat-label>
+                  <input matInput type="text" />
+                  <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+              </form>
+            </div>
+          </div> -->
+          <!-- <div class="col-12 mt-3 pt-3 pb-3">
+            <div class="card border-0 bg-transparent">
+              <h5 class="w-75 mt-3 d-block m-auto" i18n>Categories</h5>
+              <hr class="w-75 d-block m-auto" />
+              <mat-accordion class="w-75 d-block m-auto">
+                <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title i18n>
+                      Free Assessment
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <ul class="list-group">
+                    <li class="list-group-item border-0 border-bottom">
+                      <a href="/">Morbi leo risus</a>
+                    </li>
+                  </ul>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Resourses
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <ul class="list-group">
+                    <li class="list-group-item border-0 border-bottom">
+                      <a href="/">Morbi leo risus</a>
+                    </li>
+                  </ul>
+                </mat-expansion-panel>
+                <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Solution Parteners
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <ul class="list-group">
+                    <li class="list-group-item border-0 border-bottom">
+                      <a href="/">Morbi leo risus</a>
+                    </li>
+                  </ul>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div> -->
+          <div class="col-12 mt-3 pt-3 pb-3">
+            <div class="card border-0 bg-transparent">
+              <h5 class="w-75 mt-3 d-block m-auto" i18n>Recent Post</h5>
+              <hr class="w-75 d-block m-auto" />
+              <div class="media w-75 m-auto pt-3 pb-3" *ngFor="let item of AllResources |slice:0:2">
+                <img class="d-flex mr-3 ml-3" data-src="holder.js/64x64?theme=sky" alt="64x64" src="{{item?.image}}"
+                  data-holder-rendered="true" style="width: 64px; height: 64px" />
+                <div class="media-body">
+                  <h6 class="mt-0">{{item?.title[override.currentLang]}}</h6>
+                  <a [routerLink]="['/resources','single-article',item?._id]"><small i18n>More...</small></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

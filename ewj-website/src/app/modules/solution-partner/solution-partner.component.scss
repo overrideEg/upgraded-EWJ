@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+.bg {
+  background-color: $light-color;
+}
+section {
+  background-color: $light-color;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  //   min-height: 100vh;
+  direction: ltr !important;
+  h6 {
+    color: $main-color;
+    font-weight: 800;
+    &.active {
+      color: $accent-color;
+    }
+  }
+}

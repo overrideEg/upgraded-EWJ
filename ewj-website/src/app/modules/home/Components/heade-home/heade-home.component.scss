@@ -1,0 +1,85 @@
+@import "../../../../../styles.scss";
+
+section {
+  margin-top: 0;
+  background-size: cover;
+  height: 130vh;
+  width: 100%;
+  background: $second-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  overflow: hidden;
+  // z-index: 1;
+  @media screen and (max-width: 991px) {
+    height: 100vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .container-fluid {
+    background-color: rgba(0, 29, 63, 0.6);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 50;
+
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    @media screen and (max-width: 991px) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .container {
+      position: relative;
+      top: 20vh;
+
+      h5 {
+        opacity: 0.75;
+        line-height: 1.8rem;
+        margin-top: 3vh;
+      }
+      h1 {
+        @media screen and (max-width: 991px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      button {
+        margin-top: 3vh;
+        width: 30vh;
+        height: 45px;
+        font-size: 1.25rem !important;
+      }
+      @media screen and (max-width: 991px) {
+        top: 15vh;
+      }
+    }
+  }
+
+  #bgVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+}
+
+// #halfCircle{
+//     left: 0;
+//     width: 100%;
+//     position: absolute;
+//     height: 80vh;
+//     background-color: $second-rgba-75 ;
+//     border-bottom-left-radius: 137% 100%;
+//     border-bottom-right-radius: 55% 100%;
+//     margin-top: -33%;
+//     z-index: 0;
+//     @media screen and (max-width: 720px) {
+//     display: none;
+//     }
+// }

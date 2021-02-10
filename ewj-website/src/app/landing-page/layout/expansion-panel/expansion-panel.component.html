@@ -1,0 +1,61 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <div class="row mt-2 w-100 justify-content-between">
+        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+          <!-- <h5>{{ item?.title[override.currentLang] }}</h5> -->
+        </div>
+        <div class="col-auto">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+    </mat-panel-title>
+
+    <!-- <mat-panel-title>
+      <div class="row mt-2 w-100 justify-content-between">
+        <div class="col-9 col-xl-10 col-lg-10 col-md-9 col-sm-9">
+          <h5>{{ expansionPanel.expansionTitle[override.currentLang] }}</h5>
+        </div>
+        <div class="col-auto">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+    </mat-panel-title>
+    <mat-panel-description> </mat-panel-description> -->
+  </mat-expansion-panel-header>
+
+  <div class="row align-items-center align-content-center mt-2">
+    <!-- <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2" *ngFor="let cardContent of expansionPanel.card">
+      <div class="card border-0 bg-transparent">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-5 mt-2">
+            <img src="{{ cardContent.img.src }}" class="img-fluid d-block m-auto" />
+          </div>
+          <div class="col-7 mt-2 p-0">
+            <h6 class="">{{ cardContent.title[override.currentLang] }}</h6>
+          </div>
+        </div>
+        <p>
+          {{ cardContent.details[override.currentLang] }}
+          <a routerlink="/" class="bold" i18n>Read More. </a>
+        </p>
+      </div>
+    </div> -->
+    <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2" *ngFor="let item of Allcategory |slice:0:3">
+      <div class="card border-0 bg-transparent" data-aos="zoom-in">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-5 mt-2">
+            <img src="{{ item?.image }}" class="img-fluid d-block m-auto" />
+          </div>
+          <div class="col-7 mt-2 p-0">
+            <h6 class="">{{ item?.title[override.currentLang] }}</h6>
+          </div>
+        </div>
+        <p>
+          {{ item?.description[override.currentLang] }}
+          <a routerlink="/" class="bold" i18n>Read More. </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-expansion-panel>

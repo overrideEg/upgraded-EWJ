@@ -1,0 +1,40 @@
+<section id="home" *ngFor="let details of sectionDetails">
+  <video autoplay muted loop id="bgVideo">
+    <source src="{{ details.image.src }}" type="video/mp4" />
+  </video>
+  <div class="container-fluid">
+    <app-nav-bar></app-nav-bar>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <h1 class="text-center text-white" i18n>
+            Welcome to <br />
+            Employee Wellness Journey
+          </h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <h5 class="text-center text-white" i18n>
+            No one is immune from the multiple stressors being caused by
+            business turbulence. What can leaders do to improve wellbeing
+            stamina? Depending on their sector, turbulence hit organizations
+            very differently. But the single common factor for everyone is that
+            life is infinitely more stressful.
+          </h5>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button mat-flat-button color="primary" i18n routerLink='/contactUS'>Contact US</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="halfCircle"></div>
+
+<!--
+<ng-template #contact>
+  <app-contact-us></app-contact-us>
+</ng-template> -->

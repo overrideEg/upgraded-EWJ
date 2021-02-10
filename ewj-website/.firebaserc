@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ewj-new": {
+      "hosting": {
+        "project": [
+          "ewj-new"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ewj-new"
+  }
+}

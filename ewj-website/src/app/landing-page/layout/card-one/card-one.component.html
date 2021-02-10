@@ -1,0 +1,13 @@
+<div class="card shadow-sm h-100 pb-4">
+  <img class="card-img-top img-fluid m-auto d-block" [src]="card.image.src">
+  <div class="card-body">
+    <h5 class="card-title"> {{card.title[override.currentLang]}} </h5>
+    <p class="card-text"> {{card.details[override.currentLang]}}</p>
+
+    <div class="card-footer position-absolute p-0 pb-2 w-100 border-0 bg-transparent" style="bottom: 0.5rem;">
+      <button mat-flat-button color="primary" routerLink="{{card.button.link}}" >
+        {{card.button[override.currentLang]}}
+      </button>
+    </div>
+  </div>
+</div>

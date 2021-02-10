@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+section{
+    width: 600px;
+    @media screen and (max-width: 991px) {
+        width: auto;
+    }
+}
+.mat-form-field{
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+h5{
+    @include myFont($white-color, 1.3rem, 500);
+    @include myPadding(0.5rem, 1rem, 0.5rem, 1rem);
+    @include myContainer($accent-color, $white-color, $main-color);
+    @include myBorder(0, 0, 0, 0.5rem solid, $main-color, 0);
+    width: fit-content;
+}
+button{
+    height: 45px;
+}

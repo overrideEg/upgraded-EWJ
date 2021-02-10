@@ -1,0 +1,200 @@
+@import "style/colors.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~font-awesome/css/font-awesome.min.css";
+@import "style/animation.scss";
+@import "style/animation-carousel.scss";
+@import "style/angular-material.scss";
+@import "style/bootstrap-customize.scss";
+
+// @font-face {
+//   font-family: "Font Awesome 5 Free" !important;
+//   @import "~font-awesome/css/font-awesome.min.css";
+// }
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+$theme-font: "El Messiri", sans-serif;
+
+html,
+body {
+  height: 100%;
+  //transition: 0.3s;
+
+  // direction: var(--direction);
+  // text-align: var(--text-align);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--white-color);
+}
+button {
+  outline: none !important;
+}
+
+/*scroll style*/
+::-webkit-scrollbar {
+  width: 15px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar:hover {
+  opacity: 1 !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color !important;
+  // border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $accent-color !important;
+}
+
+a {
+  @include myFont(var(--main-color), 1rem, 400);
+  &:hover {
+    text-decoration: none;
+  }
+}
+p {
+  @include myFont(var(--dark-color), 1rem, 400);
+}
+h6 {
+  @include myFont(var(--dark-color), 1rem, 500);
+}
+h5 {
+  @include myFont(var(--dark-color), 1.4rem, 500);
+  @media screen and (max-width: 991px) {
+    @include myFont(var(--dark-color), 1.125rem, 400);
+  }
+}
+h4 {
+  @include myFont($accent-color, 1.8rem, 500);
+  @media screen and (max-width: 991px) {
+    @include myFont($accent-color, 1.4rem, 400);
+  }
+}
+h3 {
+  @include myFont(var(--dark-color), 2.2rem, 600);
+  @media screen and (max-width: 991px) {
+    @include myFont(var(--dark-color), 1.8rem, 400);
+  }
+}
+h2 {
+  @include myFont(var(--dark-color), 2.5rem, 600);
+  @media screen and (max-width: 991px) {
+    @include myFont(var(--dark-color), 2.2rem, 400);
+  }
+}
+h1 {
+  @include myFont($main-color, 3rem, 800);
+  @media screen and (max-width: 991px) {
+    @include myFont($main-color, 2.5rem, 600);
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+div {
+  text-align: initial;
+  font-family: $theme-font;
+}
+body[dir="rtl"] {
+  button,
+  a,
+  .mat-flat-button {
+    text-align: right !important;
+  }
+}
+body[dir="ltr"] {
+  button,
+  a,
+  .mat-flat-button {
+    text-align: left !important;
+  }
+}
+
+.navBar {
+  background-color: $second-rgba-75 !important ;
+}
+
+.cursor-loader {
+  // background-color: $white-color !important;
+  cursor: wait;
+  display: table-column;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  * {
+    cursor: wait !important;
+  }
+  .loading {
+    $colors: $main-color, $accent-color, $second-color;
+    display: flex;
+    animation-delay: 1s;
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    top: 50%;
+
+    .dot {
+      position: relative;
+      width: 2em;
+      height: 2em;
+      margin: 0.8em;
+      border-radius: 50%;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        animation: wave 2s ease-out infinite;
+      }
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          background: nth($colors, $i);
+
+          &::before {
+            animation-delay: $i * 0.2s;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes wave {
+    50%,
+    75% {
+      transform: scale(2.5);
+    }
+
+    80%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

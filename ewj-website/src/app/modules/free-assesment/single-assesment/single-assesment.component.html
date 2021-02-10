@@ -1,0 +1,111 @@
+<div class="bg">
+  <div class="navBar">
+    <app-nav-bar></app-nav-bar>
+  </div>
+  <section>
+    <div class="container-fluid shadow-sm">
+      <div class="row w-75 d-block m-auto align-items-center justify-content-center">
+        <div class="card border-0 rounded-0">
+          <h3 class="text-captalize w-100 d-block m-auto">{{AllResources?.title[override.currentLang]}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-8 col-lg-8 col-md-8 col-sm-11 mt-3 mb-3">
+          <div class="row">
+            <div class="col-12">
+              <img src="{{AllResources?.image}}" class="img-fluid" />
+            </div>
+            <div class="col-12 border-bottom">
+              <div class="row p-3">
+                <div class="col-auto d-flex justify-content-center">
+                  <mat-icon>date_range</mat-icon>
+                  <span class="mr-2 ml-2">{{AllResources?.valueDate | date:'medium'}}</span>
+                </div>
+                <div class="col-auto d-flex justify-content-center">
+                  <mat-icon>create</mat-icon>
+                  <span class="mr-2 ml-2">Symbios</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 border-bottom">
+              <h4 class="pl-3 pr-3 pt-3 mt-2">
+                {{AllResources?.title[override.currentLang]}}
+              </h4>
+              <p class="p-3 pt-0">
+                {{AllResources?.body[override.currentLang]}}
+              </p>
+              <p class="p-3">
+                {{AllResources?.description[override.currentLang]}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-10 sidebar mt-3 mb-3">
+          <div class="row">
+            <div class="col-xl">
+              <div class="card border-0 bg-transparent">
+                <form>
+                  <mat-form-field class="example-full-width w-75 d-block m-auto">
+                    <mat-label i18n>Search</mat-label>
+                    <input matInput type="text" i18n />
+                    <mat-icon matSuffix>search</mat-icon>
+                  </mat-form-field>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 mt-3 pt-3 pb-3">
+              <div class="card border-0 bg-transparent">
+                <h5 class="w-75 mt-3 d-block m-auto" i18n>Categories</h5>
+                <hr class="w-75 d-block m-auto" />
+                <mat-accordion class="w-75 d-block m-auto">
+                  <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title i18n>
+                        Free Assessment
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="list-group">
+                      <li class="list-group-item border-0 border-bottom">
+                        <a href="/">Morbi leo risus</a>
+                      </li>
+                    </ul>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title i18n>
+                        Resourses
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="list-group">
+                      <li class="list-group-item border-0 border-bottom">
+                        <a href="/">Morbi leo risus</a>
+                      </li>
+                    </ul>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel hideToggle class="w-100 border-bottom shadow-none">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title i18n>
+                        Solution Parteners
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="list-group">
+                      <li class="list-group-item border-0 border-bottom">
+                        <a href="/">Morbi leo risus</a>
+                      </li>
+                    </ul>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

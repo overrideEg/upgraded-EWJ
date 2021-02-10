@@ -1,0 +1,114 @@
+@import "colors.scss";
+@import "mixin.scss";
+
+button {
+  overflow: hidden;
+}
+
+.btn {
+  padding      : 0.5rem 1em 0.5rem 1em;
+  border-radius: 0px;
+  font-size    : 0.9rem;
+  font-weight  : 500;
+  transition   : 0.3s;
+  min-height: 7vh !important;
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  @include myContainer($main-color, $white-color, $main-color);
+
+  &:hover {
+    @include myContainer($white-color, $main-color, $main-color);
+  }
+}
+
+.btn-secondary {
+  @include myContainer($accent-color, $white-color, $accent-color);
+
+  &:hover {
+    @include myContainer($white-color, $accent-color, $accent-color);
+  }
+}
+
+.btn-danger {
+  @include myContainer($danger-color, $white-color, $danger-color);
+
+  &:hover {
+    @include myContainer($white-color, $danger-color, $danger-color);
+  }
+}
+
+.btn-warning {
+  @include myContainer($warning-color, $white-color, $warning-color);
+
+  &:hover {
+    @include myContainer($white-color, $warning-color, $warning-color);
+  }
+}
+
+.btn-light  {
+  @include myContainer($white-color, $main-color, $white-color);
+
+  &:hover {
+    @include myContainer($white-color, $main-color, $main-color);
+  }
+}
+
+.dropdown-toggle::after {
+  color: $main-color !important;
+}
+
+.form-control {
+  @include myFont($dark-color, 1rem, 400);
+  @include myBorder(0, 0, 2px solid, 0, $dark-color, 0);
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.text-primary {
+  color: $main-color;
+}
+
+.text-secondary {
+  color: $accent-color;
+}
+
+.text-dark {
+  color: $dark-color;
+}
+
+.text-light {
+  color: $light-color;
+}
+
+.text-white {
+  color: $white-color;
+}
+
+.bg-primary {
+  background-color: $main-color !important;
+  color           : $white-color;
+}
+
+.bg-secondary {
+  background-color: $accent-color !important;
+  color           : $white-color;
+}
+
+.bg-light {
+  background-color: var(--light-color) !important;
+  color           : var(--dark-color) !important;
+}
+
+
+.card{
+  background-color: var(--light-color);
+  color           : var(--dark-color);
+}

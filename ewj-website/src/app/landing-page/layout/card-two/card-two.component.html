@@ -1,0 +1,11 @@
+<div class="card">
+  <img class="card-img-top img-fluid m-auto rounded-circle d-block" [src]="card.image.src">
+  <div class="card-body">
+    <h5 class="card-title text-center"> {{card.title[override.currentLang]}} </h5>
+    <p class="card-text text-center"> {{card.details[override.currentLang]}}</p>
+
+    <button mat-flat-button color="primary" class="d-block m-auto" routerLink="{{card.button.link}}" >
+      {{card.button[override.currentLang]}}
+    </button>
+  </div>
+</div> 
